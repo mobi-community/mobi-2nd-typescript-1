@@ -1,46 +1,80 @@
-# Getting Started with Create React App
+## 목표
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```
+1.  타입스크립트가 무엇인지 명확히 알고 있어야한다.
+2.  타입스크립트의 장점과 사용 이유를 알고 있어야한다.
+3.  자바스크립트에 타입을 추론할 수 있도록 타입 부여를
+    할 수 있어야 한다
+```
 
-## Available Scripts
+## 타입스크립트란?
 
-In the project directory, you can run:
+```
+TypeScript란 말그대로 JavaScript에 Type을 부여하는 언어이다.(JavaScript의 확장된 언어!)
+다른 분아야와는 달리 웹 프론트분야에서는 OOP(객체지향 프로그램)을 적용하기 쉽지 않다. 이를 개선하고자 오늘날 JS에서는 함수형 프로그래밍에 객체 기반 타입을 얹는 방식이 자리잡게 되었다.
+하지만 런타임에서만 에러를 확인할 수 있다는 점과, 협업에서의 문제도 고려했을 때 JS에도 static type의 필요성이 대두되었고, 그 결과 타입스크립트가 부상한다.
 
-### `npm start`
+- OOP(객체지향프로그래밍), 접근 제어자, 상속과 같은 객체지향의 특징들을 사용 가능
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 타입스크립트를 사용해야하는 이유
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### (1) JavaScript and More (자바스크립트 및 기본)
 
-### `npm test`
+동적인 자바스크립트 언어에 타입을 미리 부여함으로써 (정적 타입 언어로 변환) 컴파일 시 에러를 잡을 수가 있다
+TypeScript는 기존의 자바스크립트(ES5) 문법을 그대로 사용할 수 있다.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### (2) A Result you Can (신뢰할 수 있는 결과)
 
-### `npm run build`
+타입스크립트는 모든 운영 체제, 모든 브라우저, 모든 호스트에서 사용 가능한 자바스크립트의 슈퍼셋인 오픈 프로그래밍 언어이다!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### (3) Safety at Scale (규모에따른 안전)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+타입스크립트는 자바스크립트를 이해하고 타입 추론을 사용하여 추가 코드 없이 훌륭한 툴링을 제공한다. 타입스크립트는 개발툴의 기능을 최대로 활용하여 코드 자동완성과 가이드를 제공한다.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+### 장점
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+1. 구성요소를 읽고 이해하기 쉽다.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- 버그 발생의 가능성을 줄여준다
+- props 유형에 주석을 추가해주면 구성 요소 정의할 때 가독성도 높아진다.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+2. JSX에 대해 더 나은 지원을 해 준다.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- JSX용 코드 완성 기능인 IntelliSense(코드 문법 자동완성)를 더 잘 제공한다는 것이다.
 
-## Learn More
+3. 공통 라이브러리에 대한 기본 TypeScript 지원
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- 일반적으로 사용되는 라이브러리들은 이미 TypeScript를 지원하므로 걱정할 필요가 없다.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. static Type 검사 및 IntelliSense 이점 제공
+
+- TypeScript를 사용하면 정확한 유형과 이를 변경할 위치를 쉽게 알 수 있으므로 더 나은 리팩토링을 할 수 있다.
+- TypeScript 사용하면 코드베이스를 훨씬 쉽게 읽을 수 있고 유지 관리할 수 있어
+  보다 나은 가독성과 유지관리를 할 수 있다.
+- 오류를 조기에 식별하는데 도움이 된다.
+```
+
+### 단점
+
+```
+1. 러닝커브
+
+- 자바스크립트 개발자인 경우 새로운 언어를 따로 배워 적용해야 한다는 단점이 있다
+
+2. 더 많은 코드
+
+- 타입스크립트는 자바스크립트보다 코드를 더 많이 작성해야 한다.
+이것은 개발 기간이 늘어나며, 코드를 더 작성하기 때문에 가독성이 더 떨어지는 부작용도 있다.
+
+3. 컴파일 시간
+
+- 버그 발생 가능성이 낮다는 점에 비해 소스 코드 구축으로 인한 추가시간이 많이 걸린다는 단점이 있다.
+
+4. 초기셋팅
+
+- 자바스크립트에 비해 초기 세팅이 까다롭다.(컴파일 옵션,모듈 사용 설정 등)
+```
