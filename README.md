@@ -1,3 +1,6 @@
+## 👨‍👩‍👧‍👦 MEMBER
+PAIR-1 [ NOEL, ANN ]
+
 ## 📆 DEVELOP DATE
 
 |DATE   | CONTENT  |
