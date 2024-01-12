@@ -141,3 +141,22 @@ const grade = {
 // 11. generic
 // 재사용성이 높은 컴포넌트를 만들 때 자주 활용.
 // 특히, 한가지 타입보다 여러 가지 타입에서 동작하는 컴포넌트를 생성하는데 사용
+
+// 제네릭 타입을 기본으로 쓰는 방법
+type MyProfile<T> = {
+  hobby: Array<T>;
+};
+
+// extends generic type
+type StudentType = {
+  fullName: string;
+  nickName: string;
+  age: number;
+};
+
+const StudentDetail = <T extends StudentType>(detail: T) => ({
+  fullName: "TopDragon",
+  nickName: "Peanut",
+  age: 20,
+  isDirector: true,
+});
