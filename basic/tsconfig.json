@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true, //ts파일에서 js가능 (js파일 import 가능)
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true, //각 파일을 별도의 모듈로 변환
+    "noImplicitReturns": true,
+    "noEmit": true, //컴파일 코드 생성 안함
+    "jsx": "react-jsx" //컴파일시 어떻게 코드를 jsx를 변환할지
+  }
+}
