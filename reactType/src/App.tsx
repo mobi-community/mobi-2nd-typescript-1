@@ -5,6 +5,7 @@ import Store from "./Store";
 import { MainPage } from "./types/ReactNode";
 import { ParentComponent2 } from "./types/PropsWithRef";
 import { RefType1 } from "./types/RefObject";
+import MouseEventComponent from "./types/MouseEvent";
 
 // 이 객체에 타입을 주는 것!
 // typealias
@@ -33,6 +34,7 @@ const App: React.FC = () => {
       {/* <MainPage /> */}
       {/* <ParentComponent2 /> */}
       <RefType1 />
+      <MouseEventComponent />
     </div>
   );
 };
