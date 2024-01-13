@@ -127,6 +127,7 @@ https://www.totaltypescript.com/you-can-stop-hating-react-fc
 `string`, `null`, `undefined`를 포함하는 가장 넓은 범위의 타입이다. </br>
 `ReactElement`의 슈퍼셋이다. </br>
 `children`의 타입을 정의할 때 자주 쓰이는 타입이다.
+(\*컴퓨터 과학에서 슈퍼셋이란 특정한 언어의 모든 기능을 포함하면서, 다른 기능까지 포함하도록 향상 또는 확장된 것을 의미한다고 합니다.)
 
 ```tsx
 type ReactNode =
