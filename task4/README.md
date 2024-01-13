@@ -117,4 +117,46 @@ const Component: React.FC = () => {
 
 React.FC의 고질적인 문제가 사라졌으니, 이제 사용할 수 있는 타입이 되었다. React.FC를 쓰는 것은 프로젝트의 컨벤션이나 개발자의 판단에 따라 선택해서 사용하면 되겠다!
 
-https://www.totaltypescript.com/you-can-stop-hating-react-fc `
+https://www.totaltypescript.com/you-can-stop-hating-react-fc
+
+---
+
+### React.ReactNode
+
+`ReactNode` 타입은 jsx 내에서 사용할 수 있는 모든 요소의 타입을 의미한다. </br>
+`string`, `null`, `undefined`를 포함하는 가장 넓은 범위의 타입이다. </br>
+`ReactElement`의 슈퍼셋이다. </br>
+`children`의 타입을 정의할 때 자주 쓰이는 타입이다.
+
+```tsx
+type ReactNode =
+  | ReactChild
+  | ReactFragment
+  | ReactPortal
+  | boolean
+  | null
+  | undefined;
+```
+
+### React.ReactElement
+
+`createElement`함수를 통해 생성된 객체 타입이다. `ReactNode`와는 달리 원시 타입을 허용하지 않으며, `jsx` 요소만을 허용한다.앞서 말했다시피, `ReactNode`가 `ReactElement`를 포함하는 상위 개념이다.
+
+참고 : CreateElement란?
+
+```tsx
+<div name="kimi">Hello, {name}</div>;
+
+//createElement의 결과물
+React.createElement(
+  "div",
+  {
+    name: "kimi",
+  },
+  "Hello, ",
+  name
+);
+```
+
+createElement 함수가 반환한 모든 객체는 ReactElement의 인터페이스를 따르고 있다. 즉, jsx를 사용하면 createElement에
+의해 ReactElement가 만들어진다!
