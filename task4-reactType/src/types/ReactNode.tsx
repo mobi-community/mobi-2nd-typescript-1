@@ -3,7 +3,7 @@
 // 주로 받을 props에 구체적인 타입을 알 수 없거나, 어떠한 타입도 허용하고 싶을 때 사용!
 //children타입을 정의할 때 자주 사용
 import { ReactNode } from "react";
-
+import React from "react";
 //children Props의 타입이 정의 x
 interface HeaderProps {
   children: ReactNode;
