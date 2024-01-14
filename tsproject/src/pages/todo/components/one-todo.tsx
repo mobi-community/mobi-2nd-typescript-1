@@ -4,9 +4,7 @@ interface TodoItemProps {
   state: boolean;
 }
 
-// 즉시 실행 함수로 작성시 JSX component로 쓸 수 없다는데 왜?
-
-function OneTodo({ title, content, state }: TodoItemProps) {
+const OneTodo = ({ title, content, state }: TodoItemProps) => {
   return (
     <>
       <div>{title}</div>
@@ -20,5 +18,5 @@ function OneTodo({ title, content, state }: TodoItemProps) {
       </div>
     </>
   );
-}
+};
 export default OneTodo;

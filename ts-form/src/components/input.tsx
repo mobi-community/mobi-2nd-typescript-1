@@ -1,31 +1,21 @@
 import styled from "styled-components";
-import {
-  ChangeEvent,
-  ChangeEventHandler,
-  FC,
-  InputHTMLAttributes,
-} from "react";
+import { ChangeEvent, FC } from "react";
+import { InputTypes } from "./input.type";
 
-type InputProps = {
-  label: string;
-  type: "text" | "password";
-  message: string;
-  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
-};
-
-const Pair2Input: FC<InputProps> & InputHTMLAttributes<HTMLInputElement> = ({
+const Pair2Input: FC<InputTypes> = ({
   label,
   type,
   message,
   onChange,
   ...props
 }) => {
-  const handleChange: ChangeEventHandler<HTMLInputElement> = (e) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     console.log(e.target.value);
     if (onChange) {
       onChange(e);
     }
   };
+
   return (
     <Container>
       <Label>{label}</Label>
