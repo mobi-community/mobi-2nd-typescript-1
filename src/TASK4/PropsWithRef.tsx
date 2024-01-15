@@ -1,5 +1,7 @@
 //forwardRef
 
+import React,{ FC, PropsWithRef } from "react";
+
 //커스텀 컴포넌트에서 ref를 통한 직접 제어가 필요할 때,
 //React.forwardRef를 사용하면 부모 컴포넌트로부터 하위 컴포넌트로 ref를 전달할 수 있다.
 //ref를 HTML 요소의 속성으로 넘겨줌으로써 함수 컴포넌트에서 ref를 통한 제어가 가능해진다.
@@ -35,7 +37,7 @@ type InputProps2 = {
   ref: React.Ref<HTMLInputElement>;
 };
 
-const MyInput2: FC<PropsWithRef<InputProps2>> = ({...}) => {
+const MyInput2: FC<PropsWithRef<InputProps2>> = ({...ref}) => {
   return (
     <input ref={ref} />
   );

@@ -30,6 +30,7 @@ React의 경우도 마찬가지입니다! React에서 개발자들의 편의성�
 타입스크립트에서 forwardRef 사용 시 'Component definition is missing display name' 에러가 발생한다. 이는 forwardRef() 함수를 호출할 때 익명 함수를 넘기게 되면 브라우저에서 React 개발자 도구를 사용할 때 컴포넌트의 이름이 나오지 않아 발생한다. 이를 해결하기 위해서는 CustomInput.displayName = "CustomInput"; 와 같이 함수 호출의 결과를 displayName에 설정하거나, CustomInput = forwardRef(CustomInput); 와 같이 forwardRef() 함수의 호출 결과로 기존 컴포넌트를 대체하는 방법이 있다.
 
 
+
 6. RefObject
 7. SetStateAction
 8. Dispatch
