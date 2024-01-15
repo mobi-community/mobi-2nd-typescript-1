@@ -1,11 +1,11 @@
 type Person = {
-    age: number;
-    height: number;
+  age: number;
+  height: number;
 };
 
 let seongyong: Person = {
-    age: 20,
-    height: 190,
+  age: 20,
+  height: 190,
 };
 
 //&(타입 합성)
@@ -21,8 +21,8 @@ let seongyong: Person = {
 */
 
 function log(obj: Person) {
-    console.log(obj.height);
-    return obj;
+  console.log(obj.height);
+  return obj;
 }
 
 /*
@@ -30,13 +30,12 @@ function log(obj: Person) {
 매개변수의 타입지정 만으로는 반환값의 타입을 추론하지 못할때.
 */
 
-
 function log2(obj: Person): Person & { name: string } {
-    console.log(obj.height);
-    return {
-        ...obj,
-        name: 'peanut',
-    };
+  console.log(obj.height);
+  return {
+    ...obj,
+    name: "peanut",
+  };
 }
 
 //log({age: 10});

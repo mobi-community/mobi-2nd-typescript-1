@@ -1,14 +1,16 @@
-const OneTodo = ({ todo }) => {
+import type { Todo } from "../../../type/todo";
+
+const OneTodo = ({ title, content, state }: Todo) => {
   return (
     <>
-      <div>{todo.title}</div>
-      <div>{todo.content}</div>
+      <div>{title}</div>
+      <div>{content}</div>
       <div
         style={{
-          color: todo.state ? "green" : "red",
+          color: state ? "green" : "red",
         }}
       >
-        {todo.state ? "Done" : "Not Done"}
+        {state ? "Done" : "Not Done"}
       </div>
     </>
   );

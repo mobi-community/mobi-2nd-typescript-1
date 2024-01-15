@@ -1,5 +1,6 @@
 import { useState } from "react";
 import React from "react";
+
 const MouseEventComponent = () => {
   const [input, setInput] = useState({
     text: "",
@@ -65,7 +66,6 @@ const MouseEventComponent = () => {
         <hr />
         <button>form submit</button>
       </form>
-
       <button onClick={onClick}>onClickBtn</button>
     </>
   );

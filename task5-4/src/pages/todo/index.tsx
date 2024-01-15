@@ -1,35 +1,25 @@
 import { useEffect, useState } from "react";
 import OneTodo from "./components/one-todo";
+// 해당 모듈의 type만 가져올 수 있어서 데이터 줄어든다
+import type { Todo } from "../../type/todo";
+import { TodoData } from "../../data/TodoData";
 
-const Todo = () => {
-  const [todoLsit, setTodoLsit] = useState([]);
+const Todo: React.FC = () => {
+  const [todoList, setTodoList] = useState<Todo[]>([]);
 
   useEffect(() => {
-    setTodoLsit([
-      {
-        title: "title1",
-        content: "content1",
-        state: true,
-      },
-      {
-        title: "title2",
-        content: "content2",
-        state: false,
-      },
-      {
-        title: "title3",
-        content: "content3",
-        state: false,
-      },
-    ]);
+    setTodoList(TodoData);
   }, []);
 
   return (
     <div>
       <h1>Todo Page</h1>
-      {todoLsit.map((todo) => (
-        <OneTodo todo={todo} />
-      ))}
+      {todoList.map((todo, index) => {
+        const { title, content, state } = todo;
+        return (
+          <OneTodo key={index} title={title} content={content} state={state} />
+        );
+      })}
     </div>
   );
 };
