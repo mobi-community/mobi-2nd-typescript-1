@@ -8,6 +8,8 @@
 //React함수형 컴포넌트에서 ref prop을 사용하기 위해 사용해야 하는 함수가 forwardRef이다.
 
 import { PropsWithRef, forwardRef, useRef } from "react";
+import { useImperativeHandle } from "react";
+import { useState } from "react";
 
 //ref의 타입을 React.ForwardedRef을 써주어야 한다.
 const ChildComponent = forwardRef<HTMLInputElement>(
@@ -64,3 +66,10 @@ const Input: React.FC<PropsWithRef<InputProp>> = forwardRef(({ ref }) => {
 
 //ref 타입 오류 수정
 //https://velog.io/@jungsangu/Typescript%EC%97%90%EC%84%9C-React-forwardRef-%ED%83%80%EC%9E%85-%EC%97%90%EB%9F%AC
+
+//useImperativeHandle: 부모 컴포넌트에서 자식 컴포넌트의 인스턴스나 특정 메서드에 접근하거나 조작할 수 있도록 도와줌
+//주로 자식컴포넌트가 부모 컴포넌트에 노출해야하는 메서드나 속성들을 지정할 때 사용.
+//ref의 타입을 React.ForwardedRef을 써주어야 한다.
+//링크 1회독 함 : https://velog.io/@jay/useImperativeHandle-%EB%96%A0%EB%A8%B9%EC%97%AC%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4
+//영상 1회 시청 : https://www.youtube.com/watch?v=JJGnINpS84I
+//참고하세요..
