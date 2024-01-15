@@ -189,7 +189,7 @@ type Basket = {
 
 type newBasket = Omit<Basket, "drink">;
 
-const user: newBasket = {
+const users: newBasket = {
   fruits: "체리",
   meals: "양념 갈비",
   // drink 속성이 빠져있다.
