@@ -170,10 +170,26 @@ type alias와 interface의 차이점을 먼저 정리하고, 해당 차이점에
 - Todo component
 
   - todo/index.tsx와 one-todo.tsx에서 사용하는 TodoData의 타입이 동일하여 type폴더를 만들고 Todo type을 모듈화 했습니다.
+    
+</br>
+
+📁type > todo.tsx 모듈화 </br>
+<img width="216" alt="스크린샷 2024-01-16 오후 10 18 10" src="https://github.com/mobi-community/mobi-2nd-typescript-1/assets/134191815/b8761c30-7596-4f1c-a630-e08f3e43a052">
+
+</br>
+
+📎import하여 재사용 </br>
+<img width="734" alt="스크린샷 2024-01-16 오후 10 17 43" src="https://github.com/mobi-community/mobi-2nd-typescript-1/assets/134191815/1defb771-3b5f-401c-92fb-eea2b0a82edb">
+<img width="507" alt="스크린샷 2024-01-16 오후 10 18 00" src="https://github.com/mobi-community/mobi-2nd-typescript-1/assets/134191815/09c2844d-1088-4f25-b54b-67b4040898f7">
+
+
+
 
 - Button component
   - variant, size type : 유니온 타입으로 지정하여 Button 컴포넌트가 받은 props 값에 따라 css가 바뀔 수 있게 했습니다.
   - ...rest type : variant와 size속성 말고도 button 태그 고유의 속성들을 이용하기 위해 ButtonHTMLAttributes<HTMLButtonElement>타입을 지정했습니다.
+
+<img width="749" alt="스크린샷 2024-01-16 오후 10 17 02" src="https://github.com/mobi-community/mobi-2nd-typescript-1/assets/134191815/ad7f2354-23cf-45de-b38f-800a38d6ab77">
 
 ### 회고
 
