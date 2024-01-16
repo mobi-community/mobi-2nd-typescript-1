@@ -1,4 +1,10 @@
-const OneTodo = ({ todo }) => {
+type Todo = {
+  title: string;
+  content: string;
+  state: boolean;
+};
+
+const OneTodo = ({ todo }: { todo: Todo }) => {
   return (
     <>
       <div>{todo.title}</div>

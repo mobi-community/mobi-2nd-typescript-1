@@ -1,4 +1,18 @@
-const Button = ({ variant, size, children, ...rest }) => {
+import { ButtonHTMLAttributes, FC } from "react";
+
+type ButtonProps = {
+  variant: "primary" | "secondary";
+  children: React.ReactNode;
+  size: "small" | "medium" | "large";
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
+} & ButtonHTMLAttributes<HTMLButtonElement>;
+const Button: FC<ButtonProps> = ({
+  variant,
+  size,
+  children,
+  onClick,
+  ...rest
+}) => {
   return (
     <button
       style={{
@@ -10,6 +24,7 @@ const Button = ({ variant, size, children, ...rest }) => {
         border: "none",
         cursor: "pointer",
       }}
+      onClick={onClick}
       {...rest}
     >
       {children}

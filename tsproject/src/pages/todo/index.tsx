@@ -1,11 +1,17 @@
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import OneTodo from "./components/one-todo";
 
-const Todo = () => {
-  const [todoLsit, setTodoLsit] = useState([]);
+type Todo = {
+  title: string;
+  content: string;
+  state: boolean;
+};
+
+const Todo: FC = () => {
+  const [todoLsit, setTodoList] = useState<Todo[]>([]);
 
   useEffect(() => {
-    setTodoLsit([
+    setTodoList([
       {
         title: "title1",
         content: "content1",
