@@ -191,6 +191,8 @@ type alias와 interface의 차이점을 먼저 정리하고, 해당 차이점에
 
 <img width="749" alt="스크린샷 2024-01-16 오후 10 17 02" src="https://github.com/mobi-community/mobi-2nd-typescript-1/assets/134191815/ad7f2354-23cf-45de-b38f-800a38d6ab77">
 
+----
+
 ### 회고
 
 #### 🎾 Rin
